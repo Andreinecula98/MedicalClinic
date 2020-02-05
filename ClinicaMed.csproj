@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C026333-BD8B-4424-B7C1-635C950AC93B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClinicaMed</RootNamespace>
+    <AssemblyName>ClinicaMed</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AesCrypt.cs" />
+    <Compile Include="Informatii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informatii.Designer.cs">
+      <DependentUpon>Informatii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medici.Designer.cs">
+      <DependentUpon>Medici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nom.cs">
+      <DependentUpon>Nom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nom\Diagnostice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nom\Diagnostice.Designer.cs">
+      <DependentUpon>Diagnostice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nom\Sevicii_Medicale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nom\Sevicii_Medicale.Designer.cs">
+      <DependentUpon>Sevicii_Medicale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nom\Specialitati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nom\Specialitati.Designer.cs">
+      <DependentUpon>Specialitati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacienti.Designer.cs">
+      <DependentUpon>Pacienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Programari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programari.Designer.cs">
+      <DependentUpon>Programari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vizite.cs">
+      <DependentUpon>Vizite.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vizite.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vizite.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Informatii.resx">
+      <DependentUpon>Informatii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medici.resx">
+      <DependentUpon>Medici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nom\Diagnostice.resx">
+      <DependentUpon>Diagnostice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nom\Sevicii_Medicale.resx">
+      <DependentUpon>Sevicii_Medicale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nom\Specialitati.resx">
+      <DependentUpon>Specialitati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Diagnostice.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Informatii.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Main.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Medici.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Programari.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Register.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Servicii_Medicale.resources" />
+    <EmbeddedResource Include="obj\Debug\ClinicaMed.Specialitati.resources" />
+    <EmbeddedResource Include="Pacienti.resx">
+      <DependentUpon>Pacienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programari.resx">
+      <DependentUpon>Programari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\ClinicaMed.exe.config" />
+    <None Include="Nom.xsc">
+      <DependentUpon>Nom.xsd</DependentUpon>
+    </None>
+    <None Include="Nom.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Nom.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Nom.xss">
+      <DependentUpon>Nom.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obj\Debug\ClinicaMed.csproj.CopyComplete" />
+    <None Include="obj\Debug\ClinicaMed.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\ClinicaMed.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\ClinicaMed.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Users.xsc">
+      <DependentUpon>Users.xsd</DependentUpon>
+    </None>
+    <None Include="Users.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Users.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Users.xss">
+      <DependentUpon>Users.xsd</DependentUpon>
+    </None>
+    <None Include="Vizite.xsc">
+      <DependentUpon>Vizite.xsd</DependentUpon>
+    </None>
+    <None Include="Vizite.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vizite.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Vizite.xss">
+      <DependentUpon>Vizite.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\ClinicaMed.exe" />
+    <Content Include="bin\Debug\ClinicaMed.pdb" />
+    <Content Include="bin\Debug\DevExpress.Data.v18.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v18.2.xml" />
+    <Content Include="bin\Debug\DevExpress.Data.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.Images.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v19.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v19.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v19.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v19.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v19.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v19.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v19.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v19.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v19.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v19.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.Xpo.v18.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Xpo.v18.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v19.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v19.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v19.1.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Office.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.RichEdit.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Sparkline.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraBars.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraEditors.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraGrid.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraLayout.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraPrinting.v19.1.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraTreeList.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.RichEdit.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Sparkline.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraBars.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraEditors.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraGrid.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraLayout.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraPrinting.v19.1.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraTreeList.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.RichEdit.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Sparkline.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraBars.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraEditors.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraGrid.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraLayout.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraPrinting.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraTreeList.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.RichEdit.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Sparkline.v19.1.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraBars.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraEditors.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraGrid.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraLayout.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraPrinting.v19.1.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraTreeList.v19.1.resources.dll" />
+    <Content Include="obj\Debug\ClinicaMed.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ClinicaMed.exe" />
+    <Content Include="obj\Debug\clinicamed.exe.licenses" />
+    <Content Include="obj\Debug\ClinicaMed.pdb" />
+    <Content Include="obj\Debug\TempPE\Nom.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Users.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Vizite.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
